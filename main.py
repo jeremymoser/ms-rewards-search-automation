@@ -7,12 +7,15 @@ from wonderwords import RandomWord
 import webbrowser
 import keyboard
 
-# Initiate i and count variables and values
-i = 1
-count = 4
+# Initiate variables
+counter = 1
+searches = 30
 
-# While loop to iterate from i value to count value
-while i <= count:
+print("Today's searches include:")
+print("=========================")
+
+# While loop to iterate from counter to searches value
+while counter <= searches:
     # Generate a random word utilizing RandomWord
     rw = RandomWord()
     unique_word = rw.word()
@@ -21,8 +24,9 @@ while i <= count:
     webbrowser.open(request_url)
     print("#" + str(i) + ": " + unique_word)
     # Increment i
-    i += 1
-    # Wait 3 seconds before continuing
+    counter += 1
+    # Wait 3.5 seconds before continuing
     time.sleep(3.5)
-    # Close current browser tab and loop
-    keyboard.press_and_release("cmd+w")
+# Close current browser
+keyboard.press_and_release("ctrl+shift+q")
+print("=========================")
