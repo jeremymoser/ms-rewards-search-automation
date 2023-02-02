@@ -7,10 +7,10 @@ from wonderwords import RandomWord
 import webbrowser
 import keyboard
 
-def perform_search():
+def perform_searches():
     # Initiate variables
     counter = 1
-    searches = 2
+    searches = 34
 
     print("Today's searches include:")
     print("=========================")
@@ -32,4 +32,4 @@ def perform_search():
     keyboard.press_and_release("ctrl+shift+w")
     print("=========================")
 
-perform_search()
+perform_searches()
